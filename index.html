@@ -98,6 +98,7 @@ nav {
 .hero-photo {
   background:#D9D6C9;
   min-height:650px;
+  aspect-ratio:4 / 5;
 }
 .hero-photo img {height:100%}
 
@@ -472,13 +473,11 @@ footer {padding:60px 0 25px}
       <p class="newsletter-preview-copy" id="newsletter-preview-note">
         Newsletter signup preview. Replace this mockup with your live Klaviyo embed before launch.
       </p>
-      <div class="klaviyo-placeholder" aria-describedby="newsletter-preview-note">
+      <div class="klaviyo-placeholder" aria-hidden="true">
         <h3>JOIN THE LITTLE THINGS CLUB</h3>
-        <fieldset disabled aria-hidden="true" style="border:0;padding:0;margin:0">
-          <input class="klaviyo-field" id="preview-first-name" type="text" placeholder="First name (optional)">
-          <input class="klaviyo-field" id="preview-email" type="email" placeholder="Your email address">
-          <button class="klaviyo-button" type="button">COUNT ME IN</button>
-        </fieldset>
+        <div class="klaviyo-field">First name (optional)</div>
+        <div class="klaviyo-field">Your email address</div>
+        <div class="klaviyo-button">COUNT ME IN</div>
         <small>
           Preview only. Replace this block with your Klaviyo embed snippet and promised welcome
           email flow.
