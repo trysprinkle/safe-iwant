@@ -490,13 +490,11 @@ footer {padding:60px 0 25px}
           Soon you'll be able to sign up for thoughtful reads, simple rituals, and first looks at
           what's new from Sprinkle.
         </p>
-        <div aria-hidden="true">
-          <div class="klaviyo-label">First name</div>
-          <div class="klaviyo-field">First name (optional)</div>
-          <div class="klaviyo-label">Email address</div>
-          <div class="klaviyo-field">Your email address</div>
-          <div class="klaviyo-button">COUNT ME IN</div>
-        </div>
+        <label class="klaviyo-label" for="preview-first-name">First name</label>
+        <input class="klaviyo-field" id="preview-first-name" type="text" placeholder="First name (optional)" disabled>
+        <label class="klaviyo-label" for="preview-email">Email address</label>
+        <input class="klaviyo-field" id="preview-email" type="email" placeholder="Your email address" disabled>
+        <button class="klaviyo-button" type="button" disabled>COUNT ME IN</button>
       </div>
     </div>
 
