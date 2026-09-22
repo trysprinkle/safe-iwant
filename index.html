@@ -200,6 +200,17 @@ nav {
 .newsletter p {color:#E1EAE0}
 .benefits {font-size:12px;letter-spacing:.4px;margin:25px 0}
 .klaviyo-container {max-width:480px;margin:35px auto}
+.sr-only {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0, 0, 0, 0);
+  white-space:nowrap;
+  border:0;
+}
 .klaviyo-placeholder {
   background:white;
   padding:24px;
@@ -464,16 +475,18 @@ footer {padding:60px 0 25px}
     <div class="benefits">Everyday inspiration &bull; Latest stories &bull; Brand updates</div>
 
     <div class="klaviyo-container" aria-label="Newsletter signup preview">
-      <div class="klaviyo-placeholder">
+      <form class="klaviyo-placeholder" aria-describedby="newsletter-preview-note">
         <h3>JOIN THE LITTLE THINGS CLUB</h3>
-        <div class="klaviyo-field" aria-hidden="true">First name (optional)</div>
-        <div class="klaviyo-field" aria-hidden="true">Your email address</div>
-        <div class="klaviyo-button" aria-hidden="true">COUNT ME IN</div>
-        <small>
+        <label class="sr-only" for="preview-first-name">First name</label>
+        <input class="klaviyo-field" id="preview-first-name" type="text" placeholder="First name (optional)" readonly>
+        <label class="sr-only" for="preview-email">Email address</label>
+        <input class="klaviyo-field" id="preview-email" type="email" placeholder="Your email address" readonly>
+        <button class="klaviyo-button" type="button" aria-disabled="true">COUNT ME IN</button>
+        <small id="newsletter-preview-note">
           Preview only. Replace this block with your Klaviyo embed snippet and promised welcome
           email flow.
         </small>
-      </div>
+      </form>
     </div>
 
     <p class="newsletter-note">
