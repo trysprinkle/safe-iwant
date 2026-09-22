@@ -200,16 +200,10 @@ nav {
 .newsletter p {color:#E1EAE0}
 .benefits {font-size:12px;letter-spacing:.4px;margin:25px 0}
 .klaviyo-container {max-width:480px;margin:35px auto}
-.sr-only {
-  position:absolute;
-  width:1px;
-  height:1px;
-  padding:0;
-  margin:-1px;
-  overflow:hidden;
-  clip:rect(0, 0, 0, 0);
-  white-space:nowrap;
-  border:0;
+.newsletter-preview-copy {
+  margin:0 0 14px;
+  font-size:12px;
+  color:#E1EAE0;
 }
 .klaviyo-placeholder {
   background:white;
@@ -475,18 +469,21 @@ footer {padding:60px 0 25px}
     <div class="benefits">Everyday inspiration &bull; Latest stories &bull; Brand updates</div>
 
     <div class="klaviyo-container" aria-label="Newsletter signup preview">
-      <form class="klaviyo-placeholder" aria-describedby="newsletter-preview-note">
+      <p class="newsletter-preview-copy" id="newsletter-preview-note">
+        Newsletter signup preview. Replace this mockup with your live Klaviyo embed before launch.
+      </p>
+      <div class="klaviyo-placeholder" aria-describedby="newsletter-preview-note">
         <h3>JOIN THE LITTLE THINGS CLUB</h3>
-        <label class="sr-only" for="preview-first-name">First name</label>
-        <input class="klaviyo-field" id="preview-first-name" type="text" placeholder="First name (optional)" readonly>
-        <label class="sr-only" for="preview-email">Email address</label>
-        <input class="klaviyo-field" id="preview-email" type="email" placeholder="Your email address" readonly>
-        <button class="klaviyo-button" type="button" aria-disabled="true">COUNT ME IN</button>
-        <small id="newsletter-preview-note">
+        <fieldset disabled aria-hidden="true" style="border:0;padding:0;margin:0">
+          <input class="klaviyo-field" id="preview-first-name" type="text" placeholder="First name (optional)">
+          <input class="klaviyo-field" id="preview-email" type="email" placeholder="Your email address">
+          <button class="klaviyo-button" type="button">COUNT ME IN</button>
+        </fieldset>
+        <small>
           Preview only. Replace this block with your Klaviyo embed snippet and promised welcome
           email flow.
         </small>
-      </form>
+      </div>
     </div>
 
     <p class="newsletter-note">
