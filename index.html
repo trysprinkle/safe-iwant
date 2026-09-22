@@ -315,7 +315,7 @@ footer {padding:60px 0 25px}
 
 <header>
   <nav class="container" aria-label="Primary">
-    <a href="/index.html" class="logo" aria-label="Sprinkle home">sprinkle.</a>
+    <a href="index.html" class="logo" aria-label="Sprinkle home">sprinkle.</a>
     <div class="nav-links">
       <a href="#about">Our Story</a>
       <a href="#journal" class="optional">The Journal</a>
@@ -484,23 +484,23 @@ footer {padding:60px 0 25px}
       <p class="newsletter-preview-copy" id="newsletter-preview-note">
         The Little Things Club signup is coming soon.
       </p>
-      <div class="klaviyo-placeholder" aria-describedby="newsletter-preview-note">
+      <form class="klaviyo-placeholder" aria-describedby="newsletter-preview-note">
         <h3>JOIN THE LITTLE THINGS CLUB</h3>
         <p>
           Soon you'll be able to sign up for thoughtful reads, simple rituals, and first looks at
           what's new from Sprinkle.
         </p>
-        <div class="klaviyo-label">First name</div>
-        <div class="klaviyo-field">First name (optional)</div>
-        <div class="klaviyo-label">Email address</div>
-        <div class="klaviyo-field">Your email address</div>
-        <div class="klaviyo-button">COUNT ME IN</div>
-      </div>
+        <label class="klaviyo-label" for="preview-first-name">First name</label>
+        <input class="klaviyo-field" id="preview-first-name" type="text" placeholder="First name (optional)" readonly>
+        <label class="klaviyo-label" for="preview-email">Email address</label>
+        <input class="klaviyo-field" id="preview-email" type="email" placeholder="Your email address" readonly>
+        <button class="klaviyo-button" type="button" disabled>COUNT ME IN</button>
+      </form>
     </div>
 
     <p class="newsletter-note">
       Learn more about how Sprinkle handles subscriber information.<br>
-      <a href="/privacy.html">Privacy Policy</a>
+      <a href="privacy.html">Privacy Policy</a>
     </p>
   </div>
 </section>
@@ -562,7 +562,7 @@ footer {padding:60px 0 25px}
   <div class="container">
     <div class="footer-main">
       <div class="footer-brand">
-        <a href="/index.html" class="logo" aria-label="Sprinkle home">sprinkle.</a>
+        <a href="index.html" class="logo" aria-label="Sprinkle home">sprinkle.</a>
         <p>
           Celebrating the little moments, everyday inspiration, and a little more good in every day.
         </p>
@@ -578,7 +578,7 @@ footer {padding:60px 0 25px}
           <strong>Connect</strong>
           <a href="#newsletter">Newsletter</a>
           <a href="mailto:hello@trysprinkle.com">Contact</a>
-          <a href="/privacy.html">Privacy Policy</a>
+          <a href="privacy.html">Privacy Policy</a>
         </div>
       </div>
     </div>
