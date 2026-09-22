@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Sprinkle Edit: simple rituals, thoughtful inspiration, and everyday living.">
+  <title>The Sprinkle Edit | Everyday Inspiration</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <style>
+    :root {
+      --paper: #f8f6f0;
+      --paper-deep: #eeece4;
+      --sage: #dce7dc;
+      --moss: #355342;
+      --ink: #242b25;
+      --muted: #6e776f;
+      --clay: #ead8ca;
+      --line: #d9ddd5;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; object-fit: cover; }
+    .container { width: min(1180px, 88%); margin: 0 auto; }
+    .eyebrow {
+      color: var(--moss);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 {
+      margin-top: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      line-height: 1.08;
+    }
+    h1 { color: var(--moss); font-size: clamp(3.3rem, 7vw, 6rem); letter-spacing: -0.055em; }
+    h2 { font-size: clamp(2.4rem, 4.5vw, 4rem); letter-spacing: -0.04em; }
+    p { color: var(--muted); }
+    .button {
+      display: inline-block;
+      padding: 0.95rem 1.4rem;
+      background: var(--moss);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      transition: background 180ms ease, transform 180ms ease;
+    }
+    .button:hover { background: #21392b; transform: translateY(-2px); }
+
+    .announcement {
+      padding: 0.55rem 1rem;
+      background: var(--moss);
+      color: var(--white);
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-align: center;
+    }
+    header { border-bottom: 1px solid var(--line); }
+    nav { min-height: 5.3rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .brand-logo { display: block; width: 10.8rem; height: auto; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; font-size: 0.75rem; font-weight: 700; }
+    .nav-cta { border: 1px solid var(--moss); padding: 0.65rem 0.9rem; }
+
+    .hero { display: grid; grid-template-columns: 0.92fr 1.08fr; min-height: 40rem; }
+    .hero-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 6rem clamp(2rem, 8vw, 7rem); background: var(--sage); }
+    .hero-copy h1 { margin: 1.5rem 0; }
+    .hero-copy p { max-width: 29rem; margin: 0 0 2rem; font-size: 1rem; line-height: 1.9; }
+    .hero-photo { min-height: 40rem; background: #c7c8bb; }
+    .hero-photo img { height: 100%; }
+
+    .intro { padding: 7.2rem 1.25rem; text-align: center; }
+    .intro-inner { max-width: 48rem; margin: auto; }
+    .intro h2 { margin: 1.2rem 0; }
+    .intro p { max-width: 40rem; margin: 1.1rem auto; line-height: 1.9; }
+    .small-line { width: 3rem; height: 1px; margin: 2rem auto; background: var(--moss); }
+
+    .journal { padding: 6.5rem 0 7rem; background: var(--white); }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 3rem; }
+    .section-heading h2 { margin: 0.7rem 0 0; }
+    .section-heading > p { max-width: 21rem; margin: 0; font-size: 0.85rem; }
+    .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+    .article-image { height: 19rem; overflow: hidden; background: var(--paper-deep); }
+    .article-image img { height: 100%; transition: transform 350ms ease; }
+    .article:hover img { transform: scale(1.04); }
+    .article-meta { margin: 1.4rem 0 0.65rem; color: var(--moss); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; }
+    .article h3 { margin-bottom: 0.7rem; font-size: 1.8rem; }
+    .article p { margin: 0; font-size: 0.83rem; line-height: 1.85; }
+    .read-more { display: inline-block; margin-top: 1rem; border-bottom: 1px solid var(--moss); color: var(--moss); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    .feature { display: grid; grid-template-columns: 1fr 1fr; min-height: 34rem; background: var(--clay); }
+    .feature-photo img { height: 100%; min-height: 34rem; }
+    .feature-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 5rem clamp(2rem, 8vw, 7rem); }
+    .feature-copy h2 { margin: 1.2rem 0; }
+    .feature-copy p { max-width: 27rem; margin: 0.5rem 0; line-height: 1.9; }
+    .feature-copy .button { margin-top: 1.2rem; }
+
+    .rituals { padding: 6.5rem 0; text-align: center; }
+    .ritual-heading { max-width: 38rem; margin: 0 auto 3.5rem; }
+    .ritual-heading h2 { margin: 1.2rem 0; }
+    .ritual-heading p { margin: 0; }
+    .ritual-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.8rem; }
+    .number { display: grid; place-items: center; width: 2.8rem; height: 2.8rem; margin: 0 auto 1.3rem; border: 1px solid var(--moss); border-radius: 50%; color: var(--moss); font-family: Georgia, serif; }
+    .ritual h3 { margin-bottom: 0.7rem; font-size: 1.6rem; }
+    .ritual p { max-width: 18rem; margin: auto; font-size: 0.83rem; }
+
+    .newsletter { padding: 6.5rem 1.25rem; background: var(--moss); color: var(--white); text-align: center; }
+    .newsletter-inner { max-width: 42rem; margin: auto; }
+    .newsletter .eyebrow { color: var(--sage); }
+    .newsletter h2 { margin: 1.2rem 0; color: var(--white); }
+    .newsletter p { color: #e2ebe1; }
+    .benefits { margin: 1.5rem 0; font-size: 0.75rem; letter-spacing: 0.03em; }
+    .klaviyo-container { max-width: 30rem; margin: 2rem auto 1.5rem; }
+    .form-preview { padding: 1.5rem; background: var(--white); color: var(--moss); text-align: left; }
+    .form-preview label { display: block; margin-bottom: 0.6rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; }
+    .form-preview input { width: 100%; padding: 0.9rem; border: 1px solid var(--line); font: inherit; }
+    .form-preview button { width: 100%; margin-top: 0.65rem; padding: 0.95rem; border: 0; background: var(--moss); color: var(--white); font: inherit; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; cursor: pointer; }
+    .form-note { margin: 0.7rem 0 0; color: var(--muted); font-size: 0.68rem; }
+    .newsletter-note { margin: 0; font-size: 0.7rem; }
+    .newsletter-note a { text-decoration: underline; }
+
+    .stories { padding: 6rem 0; background: var(--white); }
+    .story { max-width: 48rem; margin: 0 0 4.5rem; }
+    .story:last-child { margin-bottom: 0; }
+    .story h3 { margin: 0.8rem 0; font-size: 2rem; }
+    .story p { line-height: 1.9; }
+    footer { padding: 4rem 0 1.5rem; }
+    .footer-main { display: flex; justify-content: space-between; gap: 3rem; padding-bottom: 4rem; }
+    .footer-brand { max-width: 20rem; }
+    .footer-brand p { font-size: 0.8rem; }
+    .footer-column { display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-column strong { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .footer-column a { color: var(--muted); font-size: 0.75rem; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.68rem; }
+
+    @media (max-width: 800px) {
+      .nav-links { gap: 0.8rem; }
+      .optional { display: none; }
+      .hero, .feature { grid-template-columns: 1fr; }
+      .hero-photo { min-height: 23rem; order: -1; }
+      .hero-copy { padding: 4.5rem 7%; }
+      .feature-photo img { min-height: 22rem; max-height: 25rem; }
+      .feature-copy { padding: 4.5rem 7%; }
+      .article-grid, .ritual-grid { grid-template-columns: 1fr; gap: 3.2rem; }
+      .article-image { height: 22rem; }
+      .section-heading { display: block; }
+      .section-heading > p { margin-top: 1rem; }
+      .footer-main { flex-direction: column; }
+    }
+    @media (max-width: 430px) {
+      .brand-logo { width: 9rem; }
+      .nav-cta { padding: 0.55rem; }
+      .hero-copy h1 { font-size: 3.1rem; }
+      .footer-bottom { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">A LITTLE INSPIRATION FOR YOUR EVERYDAY</div>
+
+  <header>
+    <nav class="container" aria-label="Main navigation">
+      <a href="#top" aria-label="Sprinkle home"><img class="brand-logo" src="images/sprinkle-logo.webp" alt="Sprinkle"></a>
+      <div class="nav-links">
+        <a class="optional" href="#about">Our Story</a>
+        <a class="optional" href="#journal">The Journal</a>
+        <a class="nav-cta" href="#newsletter">Join the Club</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Welcome to Sprinkle</span>
+        <h1>A little more<br>good in every day.</h1>
+        <p>Life is made up of little moments. We are here to celebrate them with thoughtful inspiration, simple rituals, and a fresh perspective on everyday living.</p>
+        <a class="button" href="#journal">Explore the Journal &rarr;</a>
+      </div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1400&q=85" alt="Sunlit table with a notebook and coffee">
+      </div>
+    </section>
+
+    <section class="intro" id="about">
+      <div class="intro-inner">
+        <span class="eyebrow">A Note from Sprinkle</span>
+        <h2>The little things are<br>the big things.</h2>
+        <div class="small-line"></div>
+        <p>At Sprinkle, we believe that a good day does not have to be extraordinary. Sometimes it is a quiet morning, a meaningful conversation, a little time outdoors, or an evening spent doing absolutely nothing.</p>
+        <p>We are inspired by the moments that make life feel fuller, and the small, intentional choices that help us appreciate them.</p>
+        <p>Here is to making room for more of what matters.</p>
+      </div>
+    </section>
+
+    <section class="journal" id="journal">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">The Sprinkle Edit</span><h2>Notes on living well.</h2></div>
+          <p>Fresh ideas, thoughtful reads, and a little inspiration for whatever the day brings.</p>
+        </div>
+        <div class="article-grid">
+          <article class="article">
+            <div class="article-image"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=85" alt="Journal and coffee on a quiet morning" loading="lazy"></div>
+            <div class="article-meta">Everyday Living / 3 Min Read</div>
+            <h3>The art of a slower morning.</h3>
+            <p>Before the notifications, to-do lists, and rush of the day, there can be a little space that is just yours.</p>
+            <a class="read-more" href="story-slower-morning.html">Read the Story &rarr;</a>
+          </article>
+          <article class="article">
+            <div class="article-image"><img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=85" alt="Hands holding a warm mug by a window" loading="lazy"></div>
+            <div class="article-meta">Mindful Moments / 4 Min Read</div>
+            <h3>Finding joy in the ordinary.</h3>
+            <p>A favorite song, fresh air, or a conversation that makes you laugh can turn an ordinary afternoon into something special.</p>
+            <a class="read-more" href="story-ordinary-joy.html">Read the Story &rarr;</a>
+          </article>
+          <article class="article">
+            <div class="article-image"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=85" alt="Warm, relaxed evening living space" loading="lazy"></div>
+            <div class="article-meta">Inspired Living / 3 Min Read</div>
+            <h3>Make room for a little more you.</h3>
+            <p>Your calendar can fill up quickly. Creating space for the things you enjoy does not require a total life overhaul.</p>
+            <a class="read-more" href="story-more-you.html">Read the Story &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div class="feature-photo"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85" alt="Person enjoying a peaceful outdoor moment" loading="lazy"></div>
+      <div class="feature-copy">
+        <span class="eyebrow">Our Philosophy</span>
+        <h2>More moments.<br>More meaning.<br>More you.</h2>
+        <p>We are not here to tell you how to live your life. We simply believe it is worth celebrating.</p>
+        <p>From quiet rituals to spontaneous adventures, there is something special about making everyday moments your own.</p>
+        <a class="button" href="#newsletter">Get Inspired &rarr;</a>
+      </div>
+    </section>
+
+    <section class="rituals" id="rituals">
+      <div class="container">
+        <div class="ritual-heading">
+          <span class="eyebrow">A Little Everyday Inspiration</span>
+          <h2>Small moments.<br>Big appreciation.</h2>
+          <p>Three simple reminders for making a little more room for yourself.</p>
+        </div>
+        <div class="ritual-grid">
+          <div class="ritual"><div class="number">01</div><h3>Start with intention.</h3><p>Give yourself a moment before the day begins. No elaborate routine required. Just a little space to decide what matters today.</p></div>
+          <div class="ritual"><div class="number">02</div><h3>Find your little joys.</h3><p>Put on your favorite playlist, step outside, call an old friend, or make time for the hobby you have been missing.</p></div>
+          <div class="ritual"><div class="number">03</div><h3>Make the moment yours.</h3><p>Some days call for adventure. Others call for a quiet evening. Find what feels right for you and enjoy it.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+      <div class="newsletter-inner">
+        <span class="eyebrow">Introducing The Little Things Club</span>
+        <h2>Good things, straight<br>to your inbox.</h2>
+        <p>A little inspiration goes a long way. Join our newsletter for thoughtful reads, simple everyday rituals, and fresh ideas from the world of Sprinkle.</p>
+        <div class="benefits">Everyday inspiration &bull; Latest stories &bull; Brand updates</div>
+        <!-- Replace this preview with the live Klaviyo embed. -->
+        <div class="klaviyo-container">
+          <form class="form-preview" action="#" method="post" onsubmit="return false;">
+            <label for="email">Join The Little Things Club</label>
+            <input id="email" name="email" type="email" placeholder="Your email address" autocomplete="email" required>
+            <button type="submit">Count Me In</button>
+            <p class="form-note">Preview only. Replace this block with your Klaviyo embed.</p>
+          </form>
+        </div>
+        <p class="newsletter-note">By subscribing, you agree to receive email updates from Sprinkle. Unsubscribe anytime.<br><a href="/privacy.html">Privacy Policy</a></p>
+      </div>
+    </section>
+
+    <section class="stories" id="stories">
+      <div class="container">
+        <div class="section-heading"><div><span class="eyebrow">A Little More to Read</span><h2>Ideas worth keeping.</h2></div></div>
+        <article class="story" id="article-morning"><span class="eyebrow">Everyday Living</span><h3>The art of a slower morning.</h3><p>A slower morning starts with a little room to choose how you spend your first few minutes. Open the curtains, take your breakfast away from your desk, or enjoy your favorite song before reaching for your phone.</p><p>The point is not to create a perfect routine. It is to find one small part of the morning that feels like it belongs to you.</p></article>
+        <article class="story" id="article-joy"><span class="eyebrow">Mindful Moments</span><h3>Finding joy in the ordinary.</h3><p>Not every memorable moment needs a special occasion. The first cool breeze of the day, a familiar song, or an unexpected laugh with a friend can make an ordinary afternoon feel special.</p><p>Keep a running list of little things you enjoy. When the week feels busy, pick one and make a little time for it.</p></article>
+        <article class="story" id="article-you"><span class="eyebrow">Inspired Living</span><h3>Make room for a little more you.</h3><p>It is easy for the calendar to fill with commitments. Look for a small opening that you can dedicate to something you genuinely enjoy.</p><p>Read a few pages, visit a favorite place, make a playlist, or simply enjoy an unplanned hour. You do not need an ambitious new goal to make room for the things that matter.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand"><a href="#top" aria-label="Sprinkle home"><img class="brand-logo" src="images/sprinkle-logo.webp" alt="Sprinkle"></a><p>Celebrating the little moments, everyday inspiration, and a little more good in every day.</p></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 Sprinkle. All rights reserved.</span><span>A little more good in every day.</span></div>
+    </div>
+  </footer>
+</body>
+</html>

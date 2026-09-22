@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 72" role="img" aria-labelledby="title desc">
+  <title id="title">Sprinkle</title>
+  <desc id="desc">Sprinkle wordmark with umbrella icon</desc>
+  <g fill="#242126">
+    <path d="M5 37c4-15 17-24 31-24s27 9 31 24c-10-7-21-9-31-9S15 30 5 37Z"/>
+    <path d="M36 37c-2 8-1 14 4 19 4 4 8 3 10-1-5 0-8-5-7-18h-7Z"/>
+    <path d="M16 11 23 0l4 2-7 12-4-3Zm20-3L38 0l4 1-1 10-5-3Z"/>
+  </g>
+  <text x="72" y="53" fill="#242126" font-family="Georgia, Times New Roman, serif" font-size="45" letter-spacing="-2">SPRINKLE</text>
+</svg>
