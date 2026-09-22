@@ -218,19 +218,23 @@ nav {
 .klaviyo-button {
   width:100%;
   padding:15px;
-  border:1px solid #ddd;
   margin-bottom:10px;
   font:inherit;
+}
+.klaviyo-field {
+  border:1px solid #ddd;
+  background:#fff;
+  color:#73776E;
 }
 .klaviyo-button {
   background:#334B3C;
   color:white;
   border:0;
   letter-spacing:1px;
-  cursor:not-allowed;
   text-transform:uppercase;
   font-size:11px;
   font-weight:700;
+  text-align:center;
 }
 .newsletter-note {font-size:11px}
 .newsletter-note a {text-decoration:underline}
@@ -460,11 +464,11 @@ footer {padding:60px 0 25px}
     <div class="benefits">Everyday inspiration &bull; Latest stories &bull; Brand updates</div>
 
     <div class="klaviyo-container" aria-label="Newsletter signup preview">
-      <div class="klaviyo-placeholder">
+      <div class="klaviyo-placeholder" role="img" aria-label="Visual preview of the future Klaviyo newsletter signup form">
         <h3>JOIN THE LITTLE THINGS CLUB</h3>
-        <input class="klaviyo-field" type="text" placeholder="First name (optional)" aria-label="First name" disabled>
-        <input class="klaviyo-field" type="email" placeholder="Your email address" aria-label="Newsletter email address" disabled>
-        <button class="klaviyo-button" type="button" disabled>COUNT ME IN</button>
+        <div class="klaviyo-field" aria-hidden="true">First name (optional)</div>
+        <div class="klaviyo-field" aria-hidden="true">Your email address</div>
+        <div class="klaviyo-button" aria-hidden="true">COUNT ME IN</div>
         <small>
           Preview only. Replace this block with your Klaviyo embed snippet and promised welcome
           email flow.
