@@ -61,6 +61,7 @@ p {color:var(--muted)}
   padding:10px;
   font-size:11px;
   letter-spacing:1px;
+  text-transform:uppercase;
 }
 header {border-bottom:1px solid #E4E5DE}
 nav {
@@ -250,6 +251,7 @@ nav {
   font-size:11px;
   font-weight:700;
   text-align:center;
+  cursor:not-allowed;
 }
 .newsletter-note {font-size:11px}
 .newsletter-note a {text-decoration:underline}
@@ -309,7 +311,7 @@ footer {padding:60px 0 25px}
 </style>
 </head>
 <body>
-<div class="announcement">A LITTLE INSPIRATION FOR YOUR EVERYDAY</div>
+<div class="announcement">A little inspiration for your everyday</div>
 
 <header>
   <nav class="container" aria-label="Primary">
@@ -484,13 +486,11 @@ footer {padding:60px 0 25px}
       </p>
       <form class="klaviyo-placeholder" aria-describedby="newsletter-preview-note">
         <h3>JOIN THE LITTLE THINGS CLUB</h3>
-        <fieldset disabled style="border:0;padding:0;margin:0">
-          <label class="klaviyo-label" for="preview-first-name">First name</label>
-          <input class="klaviyo-field" id="preview-first-name" type="text" placeholder="First name (optional)">
-          <label class="klaviyo-label" for="preview-email">Email address</label>
-          <input class="klaviyo-field" id="preview-email" type="email" placeholder="Your email address">
-          <button class="klaviyo-button" type="button">COUNT ME IN</button>
-        </fieldset>
+        <label class="klaviyo-label" for="preview-first-name">First name</label>
+        <input class="klaviyo-field" id="preview-first-name" type="text" placeholder="First name (optional)" readonly aria-readonly="true">
+        <label class="klaviyo-label" for="preview-email">Email address</label>
+        <input class="klaviyo-field" id="preview-email" type="email" placeholder="Your email address" readonly aria-readonly="true">
+        <button class="klaviyo-button" type="button" aria-disabled="true">COUNT ME IN</button>
         <small>
           Preview only. Replace this block with your Klaviyo embed snippet and promised welcome
           email flow.
