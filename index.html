@@ -87,6 +87,16 @@
     .intro p { max-width: 40rem; margin: 1.1rem auto; line-height: 1.9; }
     .small-line { width: 3rem; height: 1px; margin: 2rem auto; background: var(--moss); }
 
+    .collection { padding: 6.5rem 0; background: var(--paper-deep); }
+    .collection-heading { max-width: 42rem; margin: 0 auto 3rem; text-align: center; }
+    .collection-heading h2 { margin: 1.2rem 0; }
+    .collection-heading p { margin: 0; }
+    .collection-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .collection-item { padding: 2.5rem; background: var(--white); }
+    .collection-item h3 { margin: 0.9rem 0; color: var(--moss); font-size: 2rem; }
+    .collection-item p { max-width: 26rem; margin: 0; line-height: 1.85; }
+    .collection-link { display: inline-block; margin-top: 1.5rem; color: var(--moss); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+
     .journal { padding: 6.5rem 0 7rem; background: var(--white); }
     .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 3rem; }
     .section-heading h2 { margin: 0.7rem 0 0; }
@@ -155,6 +165,7 @@
       .feature-copy { padding: 4.5rem 7%; }
       .article-grid, .ritual-grid { grid-template-columns: 1fr; gap: 3.2rem; }
       .article-image { height: 22rem; }
+      .collection-grid { grid-template-columns: 1fr; }
       .section-heading { display: block; }
       .section-heading > p { margin-top: 1rem; }
       .footer-main { flex-direction: column; }
@@ -175,8 +186,9 @@
       <a href="#top" aria-label="Sprinkle home"><img class="brand-logo" src="images/sprinkle-logo.webp" alt="Sprinkle"></a>
       <div class="nav-links">
         <a class="optional" href="#about">Our Story</a>
+        <a class="optional" href="#collection">The Collection</a>
         <a class="optional" href="#journal">The Journal</a>
-        <a class="nav-cta" href="#newsletter">Join the Club</a>
+        <a class="nav-cta" href="#newsletter">Get the Offer</a>
       </div>
     </nav>
   </header>
@@ -202,6 +214,42 @@
         <p>At Sprinkle, we believe that a good day does not have to be extraordinary. Sometimes it is a quiet morning, a meaningful conversation, a little time outdoors, or an evening spent doing absolutely nothing.</p>
         <p>We are inspired by the moments that make life feel fuller, and the small, intentional choices that help us appreciate them.</p>
         <p>Here is to making room for more of what matters.</p>
+      </div>
+    </section>
+
+    <section class="collection" id="collection">
+      <div class="container">
+        <div class="collection-heading">
+          <span class="eyebrow">Meet the Sprinkle Collection</span>
+          <h2>Made for the moments in between.</h2>
+          <p>Discover Sprinkle GO BULK, Sprinkle CHILL BULK, Sprinkle Sleep, and Sprinkle Restore, four easygoing ways to make a little more room for the moments you look forward to.</p>
+        </div>
+        <div class="collection-grid">
+          <article class="collection-item">
+            <span class="eyebrow">For your next move</span>
+            <h3>Sprinkle GO BULK</h3>
+            <p>Bring a little extra ease to busy days, spontaneous plans, and wherever the day takes you.</p>
+            <a class="collection-link" href="#newsletter">Get the special offer &rarr;</a>
+          </article>
+          <article class="collection-item">
+            <span class="eyebrow">For your slower moments</span>
+            <h3>Sprinkle CHILL BULK</h3>
+            <p>Set the tone for laid-back evenings, quiet resets, and the simple pleasure of taking your time.</p>
+            <a class="collection-link" href="#newsletter">Get the special offer &rarr;</a>
+          </article>
+          <article class="collection-item">
+            <span class="eyebrow">For winding down</span>
+            <h3>Sprinkle Sleep</h3>
+            <p>Create a gentler end to the day and make space for a more restful evening rhythm.</p>
+            <a class="collection-link" href="#newsletter">Get the special offer &rarr;</a>
+          </article>
+          <article class="collection-item">
+            <span class="eyebrow">For a fresh reset</span>
+            <h3>Sprinkle Restore</h3>
+            <p>Find your way back to balance with a simple pause for the moments when you need it most.</p>
+            <a class="collection-link" href="#newsletter">Get the special offer &rarr;</a>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -265,10 +313,10 @@
 
     <section class="newsletter" id="newsletter">
       <div class="newsletter-inner">
-        <span class="eyebrow">Introducing The Little Things Club</span>
-        <h2>Good things, straight<br>to your inbox.</h2>
-        <p>A little inspiration goes a long way. Join our newsletter for thoughtful reads, simple everyday rituals, and fresh ideas from the world of Sprinkle.</p>
-        <div class="benefits">Everyday inspiration &bull; Latest stories &bull; Brand updates</div>
+        <span class="eyebrow">A Special Offer from Sprinkle</span>
+        <h2>Get your special offer<br>by email.</h2>
+        <p>Enter your email to receive a special offer and be the first to hear more about the Sprinkle collection.</p>
+        <div class="benefits">Sprinkle GO BULK &bull; Sprinkle CHILL BULK &bull; Sprinkle Sleep &bull; Sprinkle Restore</div>
         <div class="klaviyo-container">
           <div class="klaviyo-form-UrqnxL"></div>
         </div>
